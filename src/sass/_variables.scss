@@ -1,0 +1,50 @@
+@import "colors";
+
+
+$desktop_break_point: 1024px !default;
+
+// Typography
+
+$preferred_font: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
+
+$base_font_size: 14px !default;
+$base_font_size_desktop: 13px !default;
+$base_line_height: 24px !default;
+$base_color: rgba(0, 0, 0, .87) !default;
+
+$h1_font_size: 34px !default;
+$h1_line_height: 40px !default;
+
+$h2_font_size: 24px !default;
+$h2_line_height: 32px !default;
+
+$h3_font_size: 20px !default;
+$h3_line_height: 28px !default;
+
+$h4_font_size: 16px !default;
+$h4_font_size_desktop: 15px !default;
+$h4_line_height: 28px !default;
+
+$h5_font_size: 14px !default;
+$h5_font_size_desktop: 13px !default;
+$h5_line_height: 28px !default;
+
+$h6_font_size: 14px !default;
+$h6_font_size_desktop: 13px !default;
+$h6_line_height: 28px !default;
+
+$small_font_size: 12px !default;
+
+$blockquote_border_color: rgba(0, 0, 0, .38) !default;
+
+$hr_border_color: rgba(0, 0, 0, .38) !default;
+
+$figcaption_color: rgba(0, 0, 0, .54);
+
+
+// Tables
+$table_font_size: $base_font_size !default;
+
+$table_cell_padding: 0 24px 0 24px;
+
+$table_th_black: rgba(0, 0, 0, .54);

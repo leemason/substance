@@ -1,0 +1,49 @@
+@import "normalize";
+@import "variables";
+@import "util";
+@import "functions";
+@import "mixins";
+
+// Import roboto
+@import url("//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium");
+
+// Import material icons
+@import url("//fonts.googleapis.com/icon?family=Material+Icons");
+
+// set some defaults
+
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html{
+  font-size: $base_font_size;
+}
+
+body{
+  @include font-size($base_font_size);
+  line-height: px-to-rem($base_line_height);
+  font-family: $preferred_font;
+  font-weight: 400;
+  color: $base_color;
+  background: $palette-grey-50;
+}
+
+code, kbd, pre, samp {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+// Import all the CSS
+
+@import "typography";
+@import "table";
+
+
+.container{
+  margin: 0 auto;
+  width: 960px;
+  max-width: 98%;
+  background: $color-white;
+}

@@ -1,0 +1,224 @@
+h1, h2, h3, h4, h5, h6{
+  font-weight: 400;
+  margin: 0.6em 0 0.6em 0;
+
+  small{
+    font-size: 0.6em;//ems here as its relative to parent
+  }
+}
+
+h1{
+  @include font-size($h1_font_size);
+  @include line-height($h1_line_height);
+}
+
+h2{
+  @include font-size($h2_font_size);
+  @include line-height($h2_line_height);
+}
+
+h3{
+  @include font-size($h3_font_size);
+  @include line-height($h3_line_height);
+  font-weight: 500;
+}
+
+h4{
+  @include font-size($h4_font_size);
+  @include line-height($h4_line_height);
+}
+
+h5{
+  @include font-size($h5_font_size);
+  @include line-height($h5_line_height);
+}
+
+h6{
+  @include font-size($h6_font_size);
+  @include line-height($h6_line_height);
+}
+
+p {
+  margin-bottom: px-to-rem($base_line_height / 2);
+}
+
+a {
+  font-weight: 500;
+}
+
+blockquote {
+  border-left: 4px solid $blockquote_border_color;
+  padding-left: px-to-rem($base_font_size);
+}
+
+mark {
+  background-color: $palette-amber-A200;
+}
+
+dt {
+  font-weight: 700;
+}
+
+address {
+
+}
+
+ul, ol {
+  padding-left: px-to-rem($base_font_size) * 2;
+}
+
+small {
+  @include font-size($small_font_size);
+}
+
+hr{
+  border: none;
+  border-top: 1px solid $hr_border_color;
+  margin: px-to-rem($base_font_size) 0 px-to-rem($base_font_size) 0;
+}
+
+kbd{
+  background: $base_color;
+  color: $color-white;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+code{
+  background: $palette-red-50;
+  color: $palette-red-A700;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+pre{
+  background: $palette-grey-200;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid $palette-grey-400;
+  color: $palette-grey-800;
+  margin-bottom: px-to-rem($base_line_height / 2);
+}
+
+figure{
+  display: inline-block;
+  margin: px-to-rem($base_line_height / 2);
+  text-align: center;
+
+  figcaption{
+    color: $figcaption_color;
+  }
+}
+
+meter {
+  display: block;
+  margin: 0 auto;
+
+  width: 100%;
+  height: 4px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Firefox */
+  background: none; /* Required to get rid of the default background prop. */
+  background: $palette-indigo-100;
+
+  margin-bottom: px-to-rem($base_line_height / 2);
+}
+
+meter::-webkit-meter-bar {
+  background: none; /* Important to get rid of default background. */
+  background: $palette-indigo-100;
+}
+
+meter::-webkit-meter-optimum-value {
+  transition: width .5s;
+  background: $palette-indigo-500;
+}
+
+meter::-webkit-meter-optimum-value:hover {
+  background: $palette-indigo-500;
+  transition: width .5s;
+  width: 100% !important; /* !important keyword used to override the inline style in ebkit browsers. */
+}
+
+meter::-moz-meter-bar {
+  background: $palette-indigo-500;
+}
+
+
+
+progress {
+
+  display: block;
+  margin: 0 auto;
+
+  /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
+  border: none;
+
+  width: 100%;
+  height: 4px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Firefox */
+  background: none; /* Required to get rid of the default background prop. */
+  background: $palette-indigo-100;
+
+  margin-bottom: px-to-rem($base_line_height / 2);
+}
+
+progress[value]::-webkit-progress-bar,
+progress[value]::-moz-progress-bar{
+  background: $palette-indigo-100;
+}
+
+progress[value]::-webkit-progress-value {
+  background: $palette-indigo-500;
+}
+
+
+iframe{
+  border: none;
+}
+
+
+
+
+fieldset{
+  border: 1px solid $hr_border_color;
+  margin: px-to-rem($base_font_size) 0 px-to-rem($base_font_size) 0;
+  padding: px-to-rem($base_font_size);
+
+  legend{
+    padding: 0 $base_font_size 0 $base_font_size;
+    font-weight: 500;
+    color: $table_th_black;
+  }
+}
+
+
+
+@media (min-width: $desktop_break_point) {
+
+  body{
+    @include font-size($base_font_size_desktop);
+  }
+
+  h4{
+    @include font-size($h4_font_size_desktop);
+  }
+
+  h5{
+    @include font-size($h5_font_size_desktop);
+    font-weight: 500;
+  }
+
+  h6{
+    @include font-size($h6_font_size_desktop);
+  }
+}
